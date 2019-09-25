@@ -1,0 +1,43 @@
+<body bgcolor="orange"   onMouseMove="{
+   document.all.myLocation.value = 'left: '+event.x+', top: '+ event.y
+
+
+
+}">
+
+
+
+<input type=text id="myText01" value="Enter Something"><br>
+
+<input type=button value=run onclick="{
+
+   let myTemp = document.getElementById('myText01').value
+   document.getElementById('myDiv01').innerHTML = myTemp
+
+}">
+
+<div id="myDiv01">...</div>
+
+
+<input type=text id="myText02" value="Enter Something"><br>
+
+<input type=button value=run onclick="{
+
+   let myTemp = document.getElementById('myText02').value
+   document.getElementById('myDiv02').innerHTML = myTemp
+
+}">
+
+<div id="myDiv02">...</div>
+
+
+<input type=text id="myText03" value="Enter Something"><br>
+
+<input type=button value=run onclick="{
+
+   let myTemp = document.getElementById('myText03').value
+   document.getElementById('myDiv03').innerHTML = myTemp
+
+}">
+
+<div id="myDiv03">...</div>
