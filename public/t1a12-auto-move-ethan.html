@@ -1,0 +1,37 @@
+<h2 align=center>Auto Move by Ethan </h2>
+
+<img src="snoopy.png"  id="snoopy" style="position: relative; z-index:-1; left:0px; top:0px; height:100px; width:100px;">
+
+<script> var myLooping = 0 </script>
+
+<input type=button value='auto right' onclick="{
+   clearInterval(myLooping)
+   myLooping = setInterval(function(){
+   document.getElementById('snoopy').style.left = 
+   parseInt(document.getElementById('snoopy').style.left) + 10 + 'px'
+
+   if (parseInt(document.getElementById('snoopy').style.left) > 600){
+      document.getElementById('snoopy').style.left = '0px'
+   }
+
+  }, 60)
+}">
+
+
+
+<input type=button value='auto left' onclick="{
+   clearInterval(myLooping)
+   myLooping = setInterval(function(){
+   document.getElementById('snoopy').style.left = 
+   parseInt(document.getElementById('snoopy').style.left) - 10 + 'px'
+
+   if (parseInt(document.getElementById('snoopy').style.left) > 600){
+      document.getElementById('snoopy').style.left = '0px'
+   }
+
+  }, 60)
+}">
+
+
+</body>
+</html>
