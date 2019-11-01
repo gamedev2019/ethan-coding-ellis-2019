@@ -1,0 +1,88 @@
+<body bgcolor="#FF8ED4"   onMouseMove="{
+   document.all.myLocation.value = 'left: '+event.x+', top: '+ event.y
+
+
+
+}">
+
+<h1>t1a08-javascript-css-ethan.html</h1>
+
+<input type=button value="change" onclick="{
+   document.getElementById('myB01').style.color = 'blue'
+}">
+<b id="myB01" style="color:red"> Hi this is cool</b><br><br>
+
+<select id="myText01" size=1 onChange="{
+   let myTemp = document.getElementById('myText01').value
+   document.getElementById('myDiv01').style.borderStyle = myTemp
+}">
+
+<option value="groove">groove
+<option value="dotted">dotted
+<option value= "...">...
+</select>
+
+<span id="myDiv01" style="border-style:groove; border-width:4;
+border-color:red" >
+This is a box</span>
+
+<ol>
+
+Checkbox: <input type="checkbox" id="myCheck"  onclick="myFunction()">
+
+<z id="text" style="display:none">YOU CHECKED IT!</z>
+
+<script>
+function myFunction() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+
+<style>
+#text {display:none;color:red}
+</style>
+<body>
+
+
+<ol>
+
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+<body style="text-align:center;">
+
+<p6>Move the mouse over the text below:</p6>
+
+<div class="tooltip">Hover over me
+  <span class="tooltiptext">Tooltip text (Or Cooltip text LOL)</span>
+</div>
+
+</body>
