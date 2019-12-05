@@ -1,0 +1,38 @@
+<body bgcolor="#9EAFFF"   onMouseMove="{
+   document.all.myLocation.value = 'left: '+event.x+', top: '+ event.y
+
+
+
+}">
+
+<input id="myButton131" type="button" value="Extend a class" onclick="{
+class myAnimal {
+   constructor(passName, passAge, passEye, passHair) {
+      this.myName = passName;
+      this.myAge = passAge;
+      this.eyeColor = passEye;
+      this.myHair = passHair;
+ }
+   myShow(){
+      document.getElementById('myDiv131').innerHTML = 'Hello '+ this.myName +
+           '. You are ' + this.myAge + ' years old with ' + this.eyeColor + ' eyes' + this.myHair + ' hair<br>'
+   }
+}  // end class myAnimal
+
+class myCat extends myAnimal {
+
+     myShow(){
+        document.getElementById('myDiv131').innerHTML = this.myName +
+           ' is a great guy who is ' + this.myAge + ' years old with ' + this.eyeColor + ' eyes ' + this.myHair + ' hair<br>'
+    }
+}    // end extended class myCat
+
+
+
+
+   myPet = new myCat('Ethan', '17', 'blue', 'and brown')
+   myPet.myShow()
+}"><br><br><br><br>
+
+<div id='myDiv131'>...</div><br>
+
